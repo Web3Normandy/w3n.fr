@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Sora', sans-serif;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+#base {
+    position: relative;
+    z-index: 10;
+}
+
+.centrer {
+    text-align: center;
+}
+
+.logo {
+    width: 15%;
+}
+
+.title {
+    font-size: 6vw;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+#def p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+.tag {
+    font-size: 1vw;
+    text-align: left;
+}
+
+.wiki img {
+    width: 6%;
+}
+
+.social {
+    animation: 2s anim-lineUp ease-out;
+}
+
+.social img {
+    width: 50%;
+}
+
+.copyright {
+    font-size: 1.5vw;
+    text-align: right;
+}
+
+.signature a {
+    color: black;
+    outline: none;
+    font-size: 1.2vw;
+    text-decoration: none;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+@media all and (min--moz-device-pixel-ratio:0) and (max-width: 575.98px){
+    .wiki img {
+        display: none;
+    }
+
+    .social a {
+        font-size: 2.5vw;
+    }
+}
