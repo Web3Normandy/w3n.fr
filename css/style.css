@@ -51,10 +51,6 @@ canvas {
     animation: 2s anim-lineUp ease-out;
 }
 
-.social img {
-    width: 50%;
-}
-
 .copyright {
     font-size: 1.5vw;
     text-align: right;
