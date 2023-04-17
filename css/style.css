@@ -23,7 +23,12 @@ canvas {
 }
 
 .logo {
+    height: auto;
     width: 15%;
+}
+
+.label {
+    padding-left: 8px;
 }
 
 .title {
