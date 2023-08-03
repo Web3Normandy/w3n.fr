@@ -1,80 +1,92 @@
+:root {
+    --tag-color: rgb(181, 181, 181);
+    --social-color: #ad32f2;
+}
+
+html {
+    font-size: 100%;
+}
+
 body {
-    background-color: black;
-    background-attachment: fixed;
-    color: white;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Alatsi', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    background: black;
 }
 
 canvas {
+    width: 100%;
+}
+ 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.7;
-    z-index: 1;
+    width: 100vw;
 }
 
-#base {
-    position: relative;
-    z-index: 10;
-}
-
-.centrer {
+.center {
     text-align: center;
 }
-
+  
 .logo {
+    margin: 2%;
     height: auto;
-    width: 15%;
-    filter: drop-shadow(0.2rem 0.2rem 1rem black)
-}
-
-.label {
-    padding-left: 8px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    width: 10%;
+    filter: drop-shadow(0rem 0rem 0.2rem black)
 }
 
 .title {
-    font-size: 4vw;
+    font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
-    text-transform: uppercase;
     color: white;
+    text-transform: uppercase;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
-#def p {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+.def {
+    font-size: 1.5vw;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
     text-align: center;
+    padding: 2%;
+    overflow: scroll;
 }
 
 .tag {
-    font-size: 1vw;
-    text-align: left;
+    font-size: 1.2vw;
+    color: var(--tag-color);
+    margin-bottom: 2%;
 }
 
-.wiki img {
-    width: 6%;
+.join {
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    margin-top: 3%;
 }
 
-.social {
+#social {
     animation: 3s fadeIn ease-out;
 }
 
-.social a {
-    background-color: #ad32f2;
+#social a {
+    background-color: var(--social-color);
 }
 
 .copyright {
-    font-size: 1vw;
-    text-align: right;
-}
-
-.signature a {
-    color: black;
-    outline: none;
     font-size: 1.2vw;
-    text-decoration: none;
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+    color: var(--tag-color);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    text-align: right;
 }
 
 @keyframes fadeIn {
@@ -84,14 +96,43 @@ canvas {
     to {
       opacity: 1;
     }
-  }
+}
 
-@media all and (min--moz-device-pixel-ratio:0) and (max-width: 575.98px){
+/* Pour les smartphones */
+@media screen and (min--moz-device-pixel-ratio:0) and (max-width: 575.98px){
     .wiki img {
         display: none;
     }
 
-    .social a {
+    .def {
+        font-size: 14.2px;
+    }
+
+    #social a {
         font-size: 2.5vw;
+    }
+}
+
+@media (orientation: landscape) {
+    .logo, .tag, .wiki img {
+        display: none;
+    }
+
+    .def {
+        font-size: 9.5px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+ /* TV */
+ @media only screen and (min-width: 1080px) and (orientation: landscape) {
+    .logo, .tag, .wiki img {
+        display: unset;
+    }
+    .def {
+        font-size: 18px;
     }
 }

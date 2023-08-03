@@ -1,20 +1,12 @@
-
-onresize = (e) => {
-  location.reload();
-};
-
-let canvas = document.createElement("canvas");
-
-width = canvas.width = window.innerWidth * 1;
-height = canvas.height = window.innerHeight * 1.51;
-
+var canvas = document.createElement("canvas");
+var width = canvas.width = window.innerWidth * 0.75;
+var height = canvas.height = window.innerHeight * 0.75;
 document.body.appendChild(canvas);
-
 var gl = canvas.getContext('webgl');
 
 var mouse = {x: 0, y: 0};
 
-var numMetaballs = 60;
+var numMetaballs = 30;
 var metaballs = [];
 
 for (var i = 0; i < numMetaballs; i++) {
