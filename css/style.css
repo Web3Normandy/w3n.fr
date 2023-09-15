@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: 'Alatsi', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     margin: 0;
     overflow: hidden;
     background: black;
@@ -42,7 +42,7 @@ canvas {
 
 .title {
     font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Audiowide', Times, serif;
     color: white;
     text-transform: uppercase;
     text-align: center;
